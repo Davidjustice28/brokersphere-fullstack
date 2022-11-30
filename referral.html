@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Page</title>
+    <style>
+
+        h1 {
+            text-align: center;
+        }
+        form {
+            width: 80%;
+            border: 2px solid black;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 600px) {
+            form {
+                width: 500px;
+            }
+        }
+
+        @media (min-width: 800px) {
+            form {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Referral Page</h1>
+    <p>Create and submit a referral to have multiple licensed agents in your clients preferred area reach out to you right away!</p>
+    <form method="post" action="/referral">
+        <label>Name</label>
+        <input type="text" id="sender_name" name="sender_name">
+        <label>Email</label>
+        <input type="text" name="sender_email" id="sender_email">
+        <label>City</label>
+        <input type="text" id="city_input" name="city_input">
+        <label>State</label>
+        <input type="text" id="state_input" name="state_input">
+        <label>Budget</label>
+        <input type="text" id="budget_input" name="budget_input">
+        <label>Property Type</label>
+        <select id="property_type" name="property_type">
+            <option value="Single-family">Single-Family</option>
+            <option value="Multi-family">Multi-Family</option>
+            <option value="Land">Land</option>
+            <option value="Commercial">Commercial</option>
+        </select>
+        <label>Preapproved/POF</label>
+        <select id="preapproved" name="preapproved">
+            <option value="Yes">YES</option>
+            <option value="No">NO</option>
+            <option value="POF (Cash)">POF (Cash)</option>
+        </select>
+        <label>Notes</label>
+        <textarea id="notes_input" name="notes_input"></textarea>
+        <input type="submit" id="referral_button" name="referral_button" value="Submit"> 
+    </form>
+</body>
+</html>

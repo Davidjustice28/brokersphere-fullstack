@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p, h1{
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+        form {
+            width: 80%;
+            border: 2px solid black;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 4vh;
+        }
+
+        @media (min-width: 600px) {
+            form {
+                width: 500px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media (min-width: 800px) {
+            form {
+                width: 50%;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Join Our Agent Database</h1>
+    <p>Sign up to receive free leads whenever agents upload referrals they need help with.
+        <br>
+        Only agents in our network within the referrals area will be sent the leads.
+    </p>
+    
+    <form action="/signup"method="post">
+        <label>Name</label>
+        <input type="text" name="name" id="name">
+        <label>Brokerage</label>
+        <input type="text" name="brokerage" id="brokerage">
+        <label>Email Address</label>
+        <input type="text" name="email" id="email">
+        <Label>State</Label>
+        <input type="text" name="state" id="state" maxlength="2" placeholder="DE">
+        <input type="submit" name="form_button" id="form_button" value="Join">
+    </form>
+
+</body>
+</html>
