@@ -185,6 +185,29 @@ footer {
 #notice {
     font-size: small;
 }
+
+#newreferral-linkform {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+#newreferral-linkform p {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+#newreferral-linkform input {
+    border: 2px solid black;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
 @media(max-width: 500px) {
     #image-div {
         height: 100vh;
@@ -222,6 +245,10 @@ footer {
         margin-left: auto;
         margin-right: auto;
 
+    }
+
+    #newreferral-linkform {
+        flex-direction: column;
     }
     footer {
         position: relative;
@@ -263,6 +290,10 @@ footer {
             </ul>
         </section>
     </div>
+    <form id="newreferral-linkform" method="get" action="/referral">
+        <p>Have a client or lead you need to refer out? Click to upload a referral lead and have agents reach out to you. </p>
+        <input type="submit" id="referral-link" name="referral-link" value="Submit Referral">
+    </form>
     <div id="newsletter">
         <h1>Sign Up Today To Join Our Database</h1>
         <form method="get" action="/signup">

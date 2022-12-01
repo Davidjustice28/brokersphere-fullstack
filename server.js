@@ -25,7 +25,7 @@ const port = 3000
 app.use(express.urlencoded())
 
 app.get('/', (req,res) => {
-    res.sendFile(__dirname+'landing.html')
+    res.sendFile(__dirname+'/landing.html')
 })
 app.get('/signup', (req,res) => {
     res.sendFile(__dirname+'/signup.html')
