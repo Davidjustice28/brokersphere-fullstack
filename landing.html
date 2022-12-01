@@ -51,6 +51,9 @@ a {
     text-decoration: none;
 }
 
+#waitlist-button:hover, #referral-link:hover {
+    transform: scale(1.1);
+}
 
 a {
     align-self: center;
@@ -91,6 +94,7 @@ h3 {
     font-size: 30px;
 }
 
+
 section {
     border-radius: 10px;
     width: 80%;
@@ -103,6 +107,9 @@ section {
 section:nth-child(1) {
     background-color: #38838c;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section:nth-child(2) {
@@ -163,6 +170,7 @@ section li {
 
 #button2 {
     border-radius: 10px;
+    font-weight: bold;
 }
 #button2:hover, #button2:active {
     transform: scale(1.2);
@@ -208,6 +216,20 @@ footer {
     border-radius: 10px;
 
 }
+@media (min-width: 700px){
+    ol {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #notice {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 @media(max-width: 500px) {
     #image-div {
         height: 100vh;
@@ -266,12 +288,12 @@ footer {
         </form>  
     </nav>
     <div id="image-div">
-        <img id="main-logo" src="bs-trans.PNG">
+        <img id="main-logo" src="/bs-trans.PNG">
         <h3>Helping Realtors Grow Their Businesses Through Collaboration</h3>
     </div>
     <h1 id="statement"><i>There's never been a way to consistently add referral leads from other agents to your pipeline. Until now!</i></h1>
     <div id="main-section">
-        <section>
+        <section id="section1">
             <h2>3 Easy Steps</h2>
             <ol>
                 <li>Sign up to join our database</li>

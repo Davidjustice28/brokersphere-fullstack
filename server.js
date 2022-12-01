@@ -3,6 +3,8 @@ const express = require('express')
 const nodeMailer = require('nodemailer')
 const fs = require('fs')
 const {connect, addAgentToMongo} = require('./mongo')
+const exp = require('constants')
+const path = require('path')
 require('dotenv').config()
 
 //email functionality
@@ -23,7 +25,7 @@ const app = express()
 const port = 3000
 
 app.use(express.urlencoded())
-
+app.use(express.static(path.join(__dirname,'images')))
 app.get('/', (req,res) => {
     res.sendFile(__dirname+'/landing.html')
 })
