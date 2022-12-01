@@ -11,7 +11,7 @@ const transporter = nodeMailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'davidjustice28@gmail.com',
-        pass: 'mshrqcepnndbqjmp'
+        pass: process.env.MAIL_PASSWORD
     }
 })
 
@@ -23,11 +23,15 @@ const app = express()
 const port = 3000
 
 app.use(express.urlencoded())
+
+app.get('/', (req,res) => {
+    res.sendFile(__dirname+'landing.html')
+})
 app.get('/signup', (req,res) => {
     res.sendFile(__dirname+'/signup.html')
 })
 
-app.get('/', async(req,res) => {
+app.get('/referral', async(req,res) => {
     res.sendFile(__dirname+'/referral.html')
 })
 

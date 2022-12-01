@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/bs-blue-bg.PNG">
+    <title>Brokersphere</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin:0;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    background-color:#38838c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-size: larger;
+}
+
+nav img {
+    height:100%;
+    transform: scale(2);
+}
+
+a {
+    font-weight: bold;
+}
+
+
+
+#waitlist-button {
+    position: relative;
+    right: 25px;
+    background-color: white;
+    border: none;
+    color: #38838c;
+    font-weight: bold;
+    box-shadow: 0px 3px 3px  blue;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 18px;
+    text-decoration: none;
+}
+
+
+a {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:90vh;
+    border-bottom: 3px solid #38838c;
+    box-shadow: 0px 3px 4px silver;
+}
+#image-div img {
+    position: relative;
+    bottom: 10%;
+    width: 100vw;
+    height:auto;
+    transform: scale(.1);
+    transition: 2s;
+}
+
+h3 {
+    position:absolute;
+    top: 70vh;
+    text-align: center;
+    opacity: 0;
+    transition: 2s;
+}
+#main-section {
+    width: 100vw;
+    font-weight: Bold;
+    font-size: 30px;
+}
+
+section {
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    padding: 10px;
+}
+
+section:nth-child(1) {
+    background-color: #38838c;
+    color: white;
+}
+
+section:nth-child(2) {
+    color: #38838c;
+    border: 3px solid #38838c;
+}
+
+section h2{
+    text-align: center
+}
+
+section li {
+    font-size: smaller;
+}
+
+
+#statement {
+    padding-top:50px;
+    text-align: center;
+    font-size:25px;
+    opacity: 0;
+    transition: 3s;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#newsletter {
+    width: 80vw;
+    height: 40vh;
+    text-align: center;
+    background-color: #38838c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: 1px solid #38838c;
+}
+
+#newsletter a {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: none;
+    color: #38838c;
+    font-weight: bold;
+    box-shadow: 0px 3px 3px  blue;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 18px;
+    text-decoration: none;
+}
+
+#button2 {
+    border-radius: 10px;
+}
+#button2:hover, #button2:active {
+    transform: scale(1.2);
+}
+
+
+#waitlist-button:active {
+    transform: scale(1.2);
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    font-size: smaller;
+    background-color: gray;
+    color: white;
+    border: 1px solid gray;
+}
+
+#notice {
+    font-size: small;
+}
+@media(max-width: 500px) {
+    #image-div {
+        height: 100vh;
+    }
+
+    h3 {
+        font-size: small;
+        width: 70%;
+        top: 70vh;
+    }
+    #waitlist-button {
+        width:25%;
+        position: absolute;
+        top: 12%;
+        display: none;
+    }
+    
+    #newsletter {
+        position: relative;
+        top:10vh;
+        width: 70%;
+        height: 20vh;
+        border: 2px solid #38838c;
+        border-radius: 5px;
+
+    }
+
+    #newsletter h1 {
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    footer {
+        position: relative;
+        top: 5vh;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a id="a">Coming Soon This December</a>
+        <form method="get" action="/signup">
+            <input id="waitlist-button" type="submit" name="waitlist-button" value="Join Now">
+        </form>  
+    </nav>
+    <div id="image-div">
+        <img id="main-logo" src="bs-trans.PNG">
+        <h3>Helping Realtors Grow Their Businesses Through Collaboration</h3>
+    </div>
+    <h1 id="statement"><i>There's never been a way to consistently add referral leads from other agents to your pipeline. Until now!</i></h1>
+    <div id="main-section">
+        <section>
+            <h2>3 Easy Steps</h2>
+            <ol>
+                <li>Sign up to join our database</li>
+                <li>Realtors who need out of market help, upload referral details via our form.</li>
+                <li>Get instantly notified when a new referral lead for your area is uploaded</li>
+                <li>Email the sending agent to be assigned the lead </small>
+            </ol>
+            <p id="notice"><i>*Any licensed agent can upload a referral lead, but only agents registered and verified with our platform receive the leads.</i></p>
+        </section>
+        <section>
+            <h2>Platform Benefits</h2>
+            <ul>
+                <li>Never miss out on a referral fee again. Have multiple qualified agents reach out to you to help you instead of you trying to find one them.</li>
+                <li>Add more leads to your pipeline without hours of extra lead generation time.</li>
+                <li>Don't pay redfin, zillow, or realtor.com 1000s a year for internet leads. Our cost no cost!</li>
+            </ul>
+        </section>
+    </div>
+    <div id="newsletter">
+        <h1>Sign Up Today To Join Our Database</h1>
+        <form method="get" action="/signup">
+            <input type="submit" id="button2" name="button2" value="Join Now">
+        </form>
+    </div>
+    <footer>
+        <p>©2022 Copyright of Brokersphere</p>
+        <p>Email Us at brokersphere@gmail.com</p>
+    </footer>
+    <script>
+        function zoom(id,scale) {
+    document.getElementById(id).style.transform = `scale(${scale})`
+}
+setTimeout(() => {
+    document.getElementById("main-logo").style.transform = "scale(1)"
+    setTimeout(() => {
+        document.querySelector("h3").style.opacity = "1"
+    }, 1000);
+}, 500)
+
+const h1 = document.querySelector("h1")
+
+
+window.onscroll = function loadheader() {
+    if(document.documentElement.scrollTop> 75) {
+        h1.style.opacity = "1"
+    }else {
+        h1.style.opacity = "0"
+    }
+}
+    </script>
+</body>
+</html>
