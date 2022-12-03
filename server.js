@@ -25,7 +25,7 @@ const app = express()
 const port = 3000
 
 app.use(express.urlencoded())
-app.use(express.static(path.join(__dirname,'images')))
+app.use(express.static(path.join(__dirname,'static')))
 app.get('/', (req,res) => {
     res.sendFile(__dirname+'/landing.html')
 })

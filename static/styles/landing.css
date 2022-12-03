@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin:0;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    background-color:#38838c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-size: larger;
+}
+
+nav img {
+    height:100%;
+    transform: scale(2);
+}
+
+a {
+    font-weight: bold;
+}
+
+
+
+#waitlist-button {
+    position: relative;
+    right: 25px;
+    background-color: white;
+    border: none;
+    color: #38838c;
+    font-weight: bold;
+    box-shadow: 0px 3px 3px  blue;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 18px;
+    text-decoration: none;
+}
+
+#waitlist-button:hover, #referral-link:hover {
+    transform: scale(1.1);
+}
+
+a {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:90vh;
+    border-bottom: 3px solid #38838c;
+    box-shadow: 0px 3px 4px silver;
+}
+#image-div img {
+    position: relative;
+    bottom: 10%;
+    width: 100vw;
+    height:auto;
+    transform: scale(.1);
+    transition: 2s;
+}
+
+h3 {
+    position:absolute;
+    top: 70vh;
+    text-align: center;
+    opacity: 0;
+    transition: 2s;
+}
+#main-section {
+    width: 100vw;
+    font-weight: Bold;
+    font-size: 30px;
+}
+
+
+section {
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    padding: 10px;
+}
+
+section:nth-child(1) {
+    background-color: #38838c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:nth-child(2) {
+    color: #38838c;
+    border: 3px solid #38838c;
+}
+
+section h2{
+    text-align: center
+}
+
+section li {
+    font-size: smaller;
+}
+
+
+#statement {
+    padding-top:50px;
+    text-align: center;
+    font-size:25px;
+    opacity: 0;
+    transition: 3s;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#newsletter {
+    width: 80vw;
+    height: 40vh;
+    text-align: center;
+    background-color: #38838c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: 1px solid #38838c;
+}
+
+#newsletter a {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: none;
+    color: #38838c;
+    font-weight: bold;
+    box-shadow: 0px 3px 3px  blue;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 18px;
+    text-decoration: none;
+}
+
+#button2 {
+    border-radius: 10px;
+    font-weight: bold;
+}
+#button2:hover, #button2:active {
+    transform: scale(1.2);
+}
+
+
+#waitlist-button:active {
+    transform: scale(1.2);
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    font-size: smaller;
+    background-color: gray;
+    color: white;
+    border: 1px solid gray;
+}
+
+#notice {
+    font-size: small;
+}
+
+#newreferral-linkform {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+#newreferral-linkform p {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+#newreferral-linkform input {
+    border: 2px solid black;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
+@media (min-width: 700px){
+    ol {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #notice {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media(max-width: 500px) {
+    #image-div {
+        height: 100vh;
+    }
+
+    h3 {
+        font-size: small;
+        width: 70%;
+        top: 70vh;
+    }
+    #waitlist-button {
+        width:25%;
+        position: absolute;
+        top: 12%;
+        display: none;
+    }
+    
+    #newsletter {
+        position: relative;
+        top:10vh;
+        width: 70%;
+        height: 20vh;
+        border: 2px solid #38838c;
+        border-radius: 5px;
+
+    }
+
+    #newsletter h1 {
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    #newreferral-linkform {
+        flex-direction: column;
+    }
+    footer {
+        position: relative;
+        top: 5vh;
+    }
+
+}

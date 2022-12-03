@@ -5,53 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        p, h1{
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 25px;
-        }
-        form {
-            width: 80%;
-            border: 2px solid black;
-            padding: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            flex-direction: column;
-            margin-top: 4vh;
-        }
-
-        @media (min-width: 600px) {
-            form {
-                width: 500px;
-            }
-
-            h1 {
-                font-size: 30px;
-            }
-        }
-
-        @media (min-width: 800px) {
-            form {
-                width: 50%;
-            }
-
-            h1 {
-                font-size: 30px;
-            }
-        }
-    </style>
+    <link href="/styles/signup.css" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New Referral</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
     <h1>Join Our Agent Database</h1>
     <p>Sign up to receive free leads whenever agents upload referrals they need help with.
         <br>
