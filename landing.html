@@ -7,9 +7,11 @@
     <link rel="icon" type="image/x-icon" href="/bs-blue-bg.PNG">
     <title>Brokersphere</title>
     <link href="/styles/landing.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <nav>
+        <span class="material-symbols-outlined">menu</span>
         <a id="a">Coming Soon This December</a>
         <form method="get" action="/signup">
             <a href="https://safe-atoll-04857.herokuapp.com/signup"id="waitlist-button">Join Now</a>
@@ -56,25 +58,23 @@
     </footer>
     <script>
         function zoom(id,scale) {
-    document.getElementById(id).style.transform = `scale(${scale})`
-}
-setTimeout(() => {
-    document.getElementById("main-logo").style.transform = "scale(1)"
-    setTimeout(() => {
-        document.querySelector("h3").style.opacity = "1"
-    }, 1000);
-}, 500)
+            document.getElementById(id).style.transform = `scale(${scale})`
+        }
+        setTimeout(() => {
+            document.getElementById("main-logo").style.transform = "scale(1)"
+            setTimeout(() => {
+                document.querySelector("h3").style.opacity = "1"
+            }, 1000);
+        }, 500)
 
-const h1 = document.querySelector("h1")
-
-
-window.onscroll = function loadheader() {
-    if(document.documentElement.scrollTop> 75) {
-        h1.style.opacity = "1"
-    }else {
-        h1.style.opacity = "0"
-    }
-}
+        const h1 = document.querySelector("h1")
+        window.onscroll = function loadheader() {
+            if(document.documentElement.scrollTop> 75) {
+                h1.style.opacity = "1"
+            }else {
+                h1.style.opacity = "0"
+            }
+        }
     </script>
 </body>
 </html>

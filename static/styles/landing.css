@@ -17,6 +17,7 @@ nav {
     font-size: larger;
 }
 
+
 nav img {
     height:100%;
     transform: scale(2);
@@ -26,8 +27,6 @@ a {
     font-weight: bold;
 }
 
-
-
 #waitlist-button {
     position: relative;
     right: 25px;
@@ -35,7 +34,7 @@ a {
     border: none;
     color: #38838c;
     font-weight: bold;
-    box-shadow: 0px 3px 3px  blue;
+    box-shadow: 0px 3px 3px blue;
     font-size: 18px;
     padding: 10px;
     border-radius: 18px;
@@ -162,6 +161,8 @@ section li {
 #button2 {
     border-radius: 10px;
     font-weight: bold;
+    background-color: white;
+    padding: 5px;
 }
 #button2:hover, #button2:active {
     transform: scale(1.2);
@@ -205,6 +206,8 @@ footer {
     border: 2px solid black;
     font-weight: bold;
     border-radius: 10px;
+    background-color: #38838c;
+    padding: 2px;
 
 }
 @media (min-width: 700px){
@@ -217,6 +220,10 @@ footer {
     #notice {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    nav span {
+        margin-left: 2.5%;
     }
 }
 
@@ -266,6 +273,15 @@ footer {
     footer {
         position: relative;
         top: 5vh;
+    }
+
+    #button2 {
+        position: relative;
+        bottom: 10px;
+    }
+
+    nav span {
+        margin-left: 5%;
     }
 
 }
