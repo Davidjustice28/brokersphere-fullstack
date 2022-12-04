@@ -126,18 +126,4 @@ app.post('/signup' , async (req, res) => {
 
 app.listen(process.env.PORT || port, function() {
     console.log(`Server is listening on port ${port}`)
-    
-    transporter.sendMail({
-        from:'davidjustice28@gmail',
-            to: 'brokersphere@yahoo.com',
-            subject: 'Brokersphere - New Real Estate Referral in Your Area',
-            text:'this is a test email'
-    },function(err,info) {
-        if(err) {
-            console.log(err)
-        }else {
-            console.log('test email sent')
-            console.log(info)
-        }
-    })
 })

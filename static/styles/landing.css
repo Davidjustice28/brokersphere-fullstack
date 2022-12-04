@@ -162,7 +162,9 @@ section li {
     border-radius: 10px;
     font-weight: bold;
     background-color: white;
+    color: #38838c;
     padding: 5px;
+    border: 2px solid black;
 }
 #button2:hover, #button2:active {
     transform: scale(1.2);
