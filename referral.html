@@ -4,39 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/bs-blue-bg.PNG">
     <title>Referral Page</title>
     <link href="/styles/referral.css" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="https://safe-atoll-04857.herokuapp.com/">Home</a></li>
+            <li><a href="https://safe-atoll-04857.herokuapp.com/signup">Join Us</a></li>
+            <li><a href="mailto:brokersphere@yahoo.com">Contact</a></li>
+        </ul>
+    </nav>
     <h1>Referral Page</h1>
     <p>Create and submit a referral to have multiple licensed agents in your clients preferred area reach out to you right away!</p>
     <form method="post" action="/referral">
         <label>Name</label>
-        <input type="text" id="sender_name" name="sender_name">
+        <input type="text" id="sender_name" name="sender_name" placeholder="Enter your full name" required>
         <label>Email</label>
-        <input type="text" name="sender_email" id="sender_email">
+        <input type="email" name="sender_email" id="sender_email" placeholder="eg: example@email.com" required>
         <label>City</label>
-        <input type="text" id="city_input" name="city_input">
+        <input type="text" id="city_input" name="city_input" placeholder="eg: New York City" required>
         <label>State</label>
-        <input type="text" id="state_input" name="state_input">
+        <input type="text" id="state_input" name="state_input" placeholder="DE" maxlength="2" minlength="2" required>
         <label>Budget</label>
-        <input type="text" id="budget_input" name="budget_input">
+        <input type="text" id="budget_input" name="budget_input" placeholder="$250,000" required>
         <label>Property Type</label>
-        <select id="property_type" name="property_type">
+        <select id="property_type" name="property_type" required>
             <option value="Single-family">Single-Family</option>
             <option value="Multi-family">Multi-Family</option>
             <option value="Land">Land</option>
             <option value="Commercial">Commercial</option>
         </select> 
         <label>Preapproved/POF</label>
-        <select id="preapproved" name="preapproved">
+        <select id="preapproved" name="preapproved" required>
             <option value="Yes">YES</option>
             <option value="No">NO</option>
             <option value="POF (Cash)">POF (Cash)</option>
         </select>
         <label>Notes</label>
-        <textarea id="notes_input" name="notes_input"></textarea>
-        <input type="submit" id="referral_button" name="referral_button" value="Submit"> 
+        <textarea id="notes_input" name="notes_input" placeholder="Enter any notes that may help the accepting agent understand want the lead is looking to do" required></textarea>
+        <input type="submit" id="referral_button" name="referral_button" value="Submit Referral"> 
     </form>
 </body>
 </html>
