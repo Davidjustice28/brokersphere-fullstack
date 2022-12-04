@@ -10,7 +10,7 @@ require('dotenv').config()
 //email functionality
 
 const transporter = nodeMailer.createTransport({
-    service: 'gmail',
+    service: 'Gmail',
     auth: {
         user: 'davidjustice28@gmail.com',
         pass: process.env.MAIL_PASSWORD
@@ -36,6 +36,10 @@ app.get('/signup', (req,res) => {
 
 app.get('/referral', async(req,res) => {
     res.sendFile(__dirname+'/referral.html')
+})
+
+app.get('/contact', async(req,res) => {
+    res.sendFile(__dirname+'/contact.html')
 })
 
 app.post('/referral', async(req,res) => {
@@ -122,6 +126,31 @@ app.post('/signup' , async (req, res) => {
         res.sendFile(__dirname+'/signup.html')
         console.log('Error: Email provided is already in use')
     }
+})
+
+app.post('/contact', (req,res) => {
+    const {contact_name,contact_email, contact_message } = req.body
+    transporter.sendMail({
+        from:contact_email,
+        to: 'brokersphere@aol.com',
+        subject: 'Brokersphere Site - New Contact Request',
+        text: `A site visitor with the name ${contact_name} has requested to get in touch
+        Heres the request info:
+
+        Name: ${contact_name}
+        Email: ${contact_email}
+        Message: ${contact_message}
+
+        Please reach out to this visitor as soon as possible.
+        `
+    }, function(err,info) {
+        if(err) {
+            console.log(err)
+        }else {
+            console.log(info)
+        }
+    })
+    res.sendFile(__dirname+'/landing.html')
 })
 
 app.listen(process.env.PORT || port, function() {
