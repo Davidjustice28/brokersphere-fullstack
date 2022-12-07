@@ -132,7 +132,7 @@ app.post('/contact', (req,res) => {
     const {contact_name,contact_email, contact_message } = req.body
     transporter.sendMail({
         from:contact_email,
-        to: 'brokersphere@aol.com',
+        to: 'brokersphere@yahoo.com',
         subject: 'Brokersphere Site - New Contact Request',
         text: `A site visitor with the name ${contact_name} has requested to get in touch
         Heres the request info:
